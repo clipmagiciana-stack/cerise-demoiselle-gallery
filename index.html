@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description"
+    content="Cerise Demoiselle Studio - Heartcrafted and locally made candles. Visualize our creations in your own space using interactive 3D and WebAR.">
+  <title>Cerise Demoiselle Studio // WebAR Gallery</title>
+
+  <!-- Styling -->
+  <link rel="stylesheet" href="index.css">
+
+  <!-- Google Model-Viewer CDN -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.5.0/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="brand-container">
+      <h1 class="brand-title">Cerise Demoiselle</h1>
+      <div class="brand-subtitle">S T U D I O</div>
+      <div class="brand-tagline">HeartCrafted & Made Lokal</div>
+    </div>
+  </header>
+
+  <!-- Main Content (Gallery List) -->
+  <main>
+    <section class="gallery-section">
+      <div class="grid-container" id="product-grid">
+        <!-- Dynanically populated by app.js -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Hidden Global Model-Viewer for quick-launch AR on Mobile -->
+  <model-viewer id="hidden-ar-viewer" src="" ar ar-modes="webxr scene-viewer quick-look"></model-viewer>
+
+  <!-- Detail Modal Section (Interactive 3D Preview) -->
+  <div class="detail-modal" id="detail-modal">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+
+    <div class="modal-container">
+      <!-- Close Button -->
+      <button class="close-modal-btn" id="close-modal-btn" aria-label="Close modal">×</button>
+
+      <!-- Left Column: 3D Viewer -->
+      <div class="viewer-column">
+        <!-- 3D Loader Overlay -->
+        <div class="viewer-loader" id="viewer-loader">
+          <div class="loader-spinner"></div>
+          <span class="loader-text">Loading 3D Model...</span>
+        </div>
+
+        <!-- Viewer Controls Overlay -->
+        <div class="viewer-controls">
+          <button class="control-btn" id="btn-rotate" title="Toggle Auto-Rotation">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67" />
+            </svg>
+          </button>
+          <button class="control-btn" id="btn-reset" title="Reset View">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Google Model Viewer -->
+        <model-viewer id="main-viewer" src="" ar ar-modes="webxr scene-viewer quick-look" camera-controls auto-rotate
+          interaction-prompt="auto" shadow-intensity="1.5" shadow-softness="0.8" exposure="1.0"
+          environment-image="neutral" tone-mapping="neutral">
+        </model-viewer>
+      </div>
+
+      <!-- Right Column: Details Info -->
+      <div class="info-column">
+        <div class="info-header">
+          <span class="info-tag" id="exhibit-tag">Cerise Demoiselle Studio</span>
+          <h2 class="info-title" id="exhibit-title">Candle Title</h2>
+        </div>
+
+        <p class="info-description" id="exhibit-description">
+          Detailed description of this handcrafted artisanal candle.
+        </p>
+
+        <div class="info-specs">
+          <div class="spec-item">
+            <span class="spec-label">Material</span>
+            <span class="spec-value" id="exhibit-material">Natural Wax Blend</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Dimensions</span>
+            <span class="spec-value" id="exhibit-dimensions">9 x 9 x 4.5 cm</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Weight</span>
+            <span class="spec-value" id="exhibit-weight">380g</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Burn Time</span>
+            <span class="spec-value" id="exhibit-burn">~45 Hours</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-label">Fragrance</span>
+            <span class="spec-value" id="exhibit-fragrance">Unscented</span>
+          </div>
+        </div>
+
+        <button class="modal-ar-btn" id="modal-ar-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+            </path>
+            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+          </svg>
+          View in Your Space
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- QR Code Modal (Visible when AR button is clicked on Desktop) -->
+  <div class="qr-modal" id="qr-modal">
+    <div class="qr-backdrop" id="qr-backdrop"></div>
+    <div class="qr-container">
+      <button class="close-qr-btn" id="close-qr-btn">×</button>
+      <h3 class="qr-title">Scan to View in AR</h3>
+      <p class="qr-description">To place this candle in your physical room, scan the QR code below with your mobile device's camera.</p>
+
+      <div class="qr-frame">
+        <img src="" alt="Scan QR Code" id="qr-code-image" class="qr-code-img">
+      </div>
+
+      <p class="qr-footer">Requires iOS 12+ (Safari) or Android 8.0+ (Chrome)</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-brand">Cerise Demoiselle Studio</div>
+    <p class="footer-copy">&copy; 2026 Cerise Demoiselle Studio. HeartCrafted & Made Lokal. All rights reserved.</p>
+  </footer>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+
+</html>
