@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+const elements=new Map();const element=id=>{if(!elements.has(id))elements.set(id,{value:'',textContent:'',innerHTML:'',dataset:{},hidden:false,open:false,style:{},showModal(){this.open=true},close(){this.open=false}});return elements.get(id)};
+const context={document:{getElementById:element,addEventListener(){},querySelectorAll(){return []}},localStorage:{getItem(){return '[1,2]'},setItem(){}},window:{open(url){context.opened=url}},fetch:async()=>({ok:true,json:async()=>context.inventory}),setTimeout(){},setInterval(){},console};
+vm.createContext(context);const source=fs.readFileSync(new URL('../public/app.js',import.meta.url),'utf8');vm.runInContext(source.slice(0,source.indexOf('const intro=')),context);
+const run=code=>vm.runInContext(code,context);
+assert.equal(run('Array.isArray(selection)'),false);
+run("products=[{id:'4',name:'Test <script>',reference:'',description:'Sample',price:550,stock:2,status:'in-stock',image:'assets/product-4.jpg'},{id:'5',name:'Sold out',reference:'',description:'Sample',price:100,stock:0,status:'out-of-stock',image:'assets/product-5.jpg'}]; selection={}");
+assert.equal(run("add('4')"),true);assert.equal(run("add('4')"),true);assert.equal(run("add('4')"),false);assert.equal(run("add('5')"),false);assert.equal(run('selection[4]'),2);
+run('renderSelection()');assert.equal(element('selectionTotal').textContent,'Rs 1,100.00');assert(element('grid').innerHTML.includes('&lt;script&gt;'));assert(!element('grid').innerHTML.includes('Test <script>'));
+const message=run('cartMessage()');assert(message.includes('Quantity: 2 × Rs 550.00'));assert(message.includes('Total: Rs 1,100.00'));element('copy').onclick();const link=new URL(context.opened);assert.equal(link.pathname,'/23058030335');assert.equal(link.searchParams.get('text'),message);
+element('search').value='missing';run('render()');assert.equal(element('empty').hidden,false);assert.equal(element('results').textContent,'0 products shown');element('search').value='';
+context.inventory=[{id:'4',name:'Test',reference:'',description:'Sample',price:550,stock:1,status:'in-stock',image:'assets/product-4.jpg'}];await run('refresh()');assert.equal(run('selection[4]'),1);
+context.inventory[0].stock=0;await run('refresh()');assert.equal(run('Object.keys(selection).length'),0);
+context.fetch=async()=>{throw Error('offline')};await run('refresh()');assert(element('empty').textContent.includes('could not load'));context.fetch=async()=>({ok:true,json:async()=>context.inventory});await run('refresh()');assert.equal(element('empty').hidden,true);
+console.log('PASS: corrupt stored cart, stock caps, sold-out items, XSS escaping, totals, WhatsApp encoding, empty search, stock reduction, sold-out refresh, network recovery.');

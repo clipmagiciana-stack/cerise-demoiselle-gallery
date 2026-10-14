@@ -1,0 +1,162 @@
+[
+  {
+    "id": "4",
+    "name": "Wooden Coaster \n\nRef: Big",
+    "reference": "Big Coaster \nDiameter: 11 cm \n(Can also be in set of 4)",
+    "description": "L’art sous votre verre ! Chaque sous-verre est une pièce en bois unique, entièrement fabriquée et peinte à la main avec passion. Personnalisation possible : différents thèmes et gravure optionnelle. Diamètre : 11 cm.",
+    "price": 550.0,
+    "image": "assets/product-4.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Wooden Coaster \n\nRef: Small",
+    "reference": "Small Coaster\nDiameter: 9.5cm \n(Can also come in Set of 6)",
+    "description": "L’art sous votre verre ! Chaque sous-verre est une pièce en bois unique, entièrement fabriquée et peinte à la main avec passion. Personnalisation possible : différents thèmes et gravure optionnelle. Diamètre : 9,5 cm, avec creux au milieu.",
+    "price": 550.0,
+    "image": "assets/product-5.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Nigel",
+    "reference": "Decorative Vases / Presse-Papier",
+    "description": "Fabriqués artisanalement à partir de béton, ces vases décoratifs offrent une texture brute et sophistiquée. Fleurissez vos tables de fête ou utilisez-les comme presse-papiers !",
+    "price": 500.0,
+    "image": "assets/product-6.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Framboise",
+    "reference": "Decorative Vases / Presse-Papier",
+    "description": "Fabriqués artisanalement à partir de béton, ces vases décoratifs offrent une texture brute et sophistiquée. Fleurissez vos tables de fête ou utilisez-les comme presse-papiers !",
+    "price": 400.0,
+    "image": "assets/product-7.jpg"
+  },
+  {
+    "id": "8",
+    "name": "Le Galet",
+    "reference": "Decorative Vases / Presse-Papier",
+    "description": "Fabriqués artisanalement à partir de béton, ces vases décoratifs offrent une texture brute et sophistiquée. Fleurissez vos tables de fête ou utilisez-les comme presse-papiers !",
+    "price": 400.0,
+    "image": "assets/product-8.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Rocher",
+    "reference": "Decorative Vases / Presse-Papier",
+    "description": "Decorative Vases / Presse-Papier. Custom-made / on order",
+    "price": 400.0,
+    "image": "assets/product-9.jpg"
+  },
+  {
+    "id": "10",
+    "name": "Nigel \n\nChristmas Edition",
+    "reference": "Christmas Vases / Xmas Deco",
+    "description": "Christmas Vases / Xmas Deco. Custom-made / on order",
+    "price": 450.0,
+    "image": "assets/product-10.jpg"
+  },
+  {
+    "id": "11",
+    "name": "Kyss",
+    "reference": "Incense Holder",
+    "description": "Alliance parfaite entre esthétique contemporaine et durabilité. Coulé et poli à la main dans notre atelier, chaque porte-encens conserve les marques subtiles du processus artisanal.",
+    "price": 275.0,
+    "image": "assets/product-11.jpg"
+  },
+  {
+    "id": "12",
+    "name": "Noeux Douillet",
+    "reference": "Candle Holder",
+    "description": "Petites pièces, grande ambiance ! Conçus pour diffuser une lueur douce, un indispensable pour vos rituels cocooning.",
+    "price": 150.0,
+    "image": "assets/product-12.jpg"
+  },
+  {
+    "id": "13",
+    "name": "Bougeoir Oursin",
+    "reference": "Candle Holder",
+    "description": "Petites pièces, grande ambiance ! Conçus pour diffuser une lueur douce, un indispensable pour vos rituels cocooning.",
+    "price": 150.0,
+    "image": "assets/product-13.jpg"
+  },
+  {
+    "id": "14",
+    "name": "Bougeoirs Coquille",
+    "reference": "Candle Holder",
+    "description": "Petites pièces, grande ambiance ! Conçus pour diffuser une lueur douce, un indispensable pour vos rituels cocooning.",
+    "price": 175.0,
+    "image": "assets/product-14.jpg"
+  },
+  {
+    "id": "15",
+    "name": "Fleur de Lotus",
+    "reference": "Lotus scented candle",
+    "description": "Calme Absolu pour un sanctuaire de tranquillité ! Parfaite pour accompagner vos séances de yoga, de méditation ou simplement pour retrouver votre harmonie intérieure.",
+    "price": 300.0,
+    "image": "assets/product-15.jpg"
+  },
+  {
+    "id": "16",
+    "name": "La Concha",
+    "reference": "Scented Shell Candle",
+    "description": "Bougie parfumée artisanale coulée à la main dans un délicat contenant en forme de coquillage, inspiré par la douceur et la pureté de l’océan. Chaque pièce est unique, pensée comme un objet décoratif autant qu’un instant de bien-être.",
+    "price": 534.0,
+    "image": "assets/product-16.jpg"
+  },
+  {
+    "id": "17",
+    "name": "Bougie Sirene",
+    "reference": "Candle with Tray",
+    "description": "Un petit air de vacances chez vous ! Bougie en cire de soja ultra-pure et naturelle, aux motifs inspirés des trésors marins, pour créer un cocon de calme dans votre intérieur.",
+    "price": 550.0,
+    "image": "assets/product-17.jpg"
+  },
+  {
+    "id": "18",
+    "name": "Bougie Medusa",
+    "reference": "Spiral Candle",
+    "description": "Un petit air de vacances chez vous ! Bougie en cire de soja ultra-pure et naturelle, aux motifs inspirés des trésors marins, pour créer un cocon de calme dans votre intérieur.",
+    "price": 425.0,
+    "image": "assets/product-18.jpg"
+  },
+  {
+    "id": "19",
+    "name": "L'Apsara",
+    "reference": "Lotus Candle",
+    "description": "Lotus Candle. Custom-made / on order\n\nlotus candle and different fragrances available\n\nTray color can be customised",
+    "price": 525.0,
+    "image": "assets/product-19.jpg"
+  },
+  {
+    "id": "20",
+    "name": "Mocha Revé",
+    "reference": "Coffee Pot Candle",
+    "description": "Coffee Pot Candle. on order",
+    "price": 675.0,
+    "image": "assets/product-20.jpg"
+  },
+  {
+    "id": "21",
+    "name": "Mini Hearts",
+    "reference": "Hearts Candle",
+    "description": "Hearts Candle. on order",
+    "price": 750.0,
+    "image": "assets/product-21.jpg"
+  },
+  {
+    "id": "22",
+    "name": "Reve d'Hibiscus",
+    "reference": "Hibiscus Pot Candle",
+    "description": "Aux nuances marbrées et uniques, cette bougie est couronnée d’une cire de soja 100 % naturelle façonnée en fleur d’hibiscus. Des pièces uniques, entièrement fabriquées dans notre atelier avec la plus grande attention.",
+    "price": 750.0,
+    "image": "assets/product-22.jpg"
+  },
+  {
+    "id": "23",
+    "name": "Lit de Fleurs",
+    "reference": "Garden Pot Candle",
+    "description": "Garden Pot Candle. on order",
+    "price": 650.0,
+    "image": "assets/product-23.jpg"
+  }
+]
